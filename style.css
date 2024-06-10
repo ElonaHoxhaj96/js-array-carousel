@@ -1,0 +1,12 @@
+#container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo_img {
+    width: 50%;
+}
+img{
+    width: 100%;
+}
