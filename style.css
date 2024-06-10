@@ -1,12 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* setting Main container */
 #container{
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+/* Setting images */
 .photo_img {
     width: 50%;
+    display: none;
+    position: relative;
 }
 img{
     width: 100%;
+}
+
+.visible{
+    display: block;
+}
+.icone{
+    font-size: 30px;
+    color: white;
+}
+
+.fa-circle-up{
+    position: absolute;
+    top: 0;
+    right: 50%;
+}
+
+.fa-circle-down{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
 }
