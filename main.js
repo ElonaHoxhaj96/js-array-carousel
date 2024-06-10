@@ -16,7 +16,7 @@ for(let i = 0; i < immaginiArray.length; i++){
     // console.log(imgFile);
     // creare l'elemento da inserire ad ogni interazione
     let itemCarosello = `
-                <div class="photo_img > 
+                <div class="photo_img" > 
                     <img src= "${imgFile}">
                 </div>`;
     //inseriamo questo nuovo elemento al contenitore
@@ -25,9 +25,10 @@ for(let i = 0; i < immaginiArray.length; i++){
 
 //selezioniamo tutti gli elementi photo_img della pagina
 const photo_img = document.getElementsByClassName("photo_img");
-// console.log(photo_img)
+console.log(photo_img);
 
+let visibleItes = 0;
 // rendiamo visibile il primo elemento 
-photo_img[0].classList.add("visible");
+photo_img[visibleItes].classList.add("visible");
 console.log(photo_img[0]);
 
