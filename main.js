@@ -17,9 +17,7 @@ for(let i = 0; i < immaginiArray.length; i++){
     // creare l'elemento da inserire ad ogni interazione
     let itemCarosello = `
                 <div class="photo_img" > 
-                    <i class="fa-regular fa-circle-up icone "></i>
-                    <img src= "${imgFile}">
-                    <i class="fa-regular fa-circle-down icone"></i>
+                  <img src= "${imgFile}">  
                 </div>`;
     //inseriamo questo nuovo elemento al contenitore
     imgCarosello.innerHTML +=  itemCarosello    
@@ -34,19 +32,37 @@ let visibleItes = 0;
 photo_img[visibleItes].classList.add("visible");
 
 // selezioniamo lei icone con freccia su e giu
-const icone = document.getElementsByClassName("icone");
-
-// diamo la funzione al click delle icone 
-
-icone.addEventListener("click",
+const iconeNextUp = document.querySelector(".up");
+console.log(iconeNextUp);
+// diamo la funzione al click delle icone in alto
+iconeNextUp.addEventListener("click",
     function (){
+        if(visibleItes < immaginiArray.length - 1){
         //tolgo la classe visible al elemento visibile
-        photo_img[visibleItes].classList.remuve("visible");
+        photo_img[visibleItes].classList.remove("visible");
 
         //incremento il valore dell'indice visibleItems
         visibleItes++;
 
         //mettiamo la classe attiva al valore incrementato
-        photo_img[visibleItes].classList.remuve("visible");
+        photo_img[visibleItes].classList.add("visible");
+    }
+    }
+)
+// diamo la funzione al click delle icone in basso
+const iconeNextDown = document.querySelector(".down");
+console.log(iconeNextDown);
+iconeNextDown.addEventListener("click",
+    function (){
+        if(visibleItes < immaginiArray.length - 1){
+        //tolgo la classe visible al elemento visibile
+        photo_img[visibleItes].classList.remove("visible");
+
+        //incremento il valore dell'indice visibleItems
+        visibleItes++;
+
+        //mettiamo la classe attiva al valore incrementato
+        photo_img[visibleItes].classList.add("visible");
+    }
     }
 )

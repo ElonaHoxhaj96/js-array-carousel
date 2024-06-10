@@ -10,12 +10,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 /* Setting images */
 .photo_img {
     width: 50%;
     display: none;
-    position: relative;
+
 }
 img{
     width: 100%;
@@ -25,18 +26,19 @@ img{
     display: block;
 }
 .icone{
+    display: block;
     font-size: 30px;
     color: white;
 }
 
 .fa-circle-up{
     position: absolute;
-    top: 0;
+    top: 30%;
     right: 50%;
 }
 
 .fa-circle-down{
     position: absolute;
-    bottom: 0;
+    bottom: 30%;
     right: 50%;
 }
